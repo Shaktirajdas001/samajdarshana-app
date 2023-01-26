@@ -21,40 +21,106 @@ class _TextCardState extends State<TextCard> {
       Container(
         height: 200,
         width: 300,
+        color: Colors.yellow,
         // decoration: BoxDecoration(
         //   borderRadius: BorderRadius.only(
         //     bottomLeft: Radius.circular(50),
         //   ),
         //   color: Colors.yellow,
         // ),
-        child: Stack(
+        child: Row(
           children: [
-            Positioned(
-              top: 35,
-              child: Material(
-                  child: Container(
-                height: 180.0,
-                width: 300,
-                decoration: BoxDecoration(
-                  color: Colors.yellow,
-                  borderRadius: BorderRadius.circular(0.0),
-                  // new BoxShadow(
-                  //   color:Colors.green
-                  // )
-                ),
-              )),
+            // Positioned(
+            //   top: 35,
+            //   child: Material(
+            //       child: Container(
+            //     height: 180.0,
+            //     width: 300,
+            //     decoration: BoxDecoration(
+            //       color: Colors.yellow,
+            //       borderRadius: BorderRadius.circular(0.0),
+            //       // new BoxShadow(
+            //       //   color:Colors.green
+            //       // )
+            //     ),
+            //   )),
+            // ),
+            // Positioned(
+            //   child: Card(
+            //     elevation: 10.0,
+            //     shadowColor: Colors.grey,
+            //     shape: RoundedRectangleBorder(
+            //       borderRadius: BorderRadius.circular(10.0),
+            //     ),
+            //   ),
+            // ),
+
+            Container(
+              width: 125,
+              height: 125,
+              child: Align(
+                  alignment: Alignment.topRight,
+                  child: CircleAvatar(
+                    radius: 60.0,
+                    backgroundImage: AssetImage(
+                      "assets/images/yuvaadmin.png",
+                    ),
+                    // backgroundColor: Colors.yellow,
+                  )),
             ),
-            Positioned(
-              child: Card(
-                elevation: 10.0,
-                shadowColor: Colors.grey,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-              ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("युवा राहुल अग्रवाल अध्यक्ष (2021-23) "),
+                Text("मारवाड़ी युवा मंच, मोतिहारी"),
+                Text("7277756056"),
+                // Text(
+                //   Provider.of<UserProfileProvider>(context,
+                //           listen: true)
+                //       .userName,
+                //   style: const TextStyle(
+                //       fontSize: sub_title,
+                //       color: Color(subtitle_grey),
+                //       fontWeight: FontWeight.w500),
+                // )
+              ],
             ),
           ],
         ),
+        //  Row(
+        //         children: [
+        //           Container(
+        //             width: 125,
+        //             height: 125,
+        //             child: Align(
+        //                 alignment: Alignment.topRight,
+        //                 child: CircleAvatar(
+        //                   radius: 60.0,
+        //                   backgroundImage: AssetImage(
+        //                     "assets/images/yuvaadmin.png",
+        //                   ),
+        //                   backgroundColor: Colors.yellow,
+        //                 )),
+        //           ),
+        //           Column(
+        //             crossAxisAlignment: CrossAxisAlignment.start,
+        //             children: [
+        //               Text("युवा राहुल अग्रवाल अध्यक्ष (2021-23) "),
+        //               Text("मारवाड़ी युवा मंच, मोतिहारी"),
+        //               Text("7277756056"),
+        //               // Text(
+        //               //   Provider.of<UserProfileProvider>(context,
+        //               //           listen: true)
+        //               //       .userName,
+        //               //   style: const TextStyle(
+        //               //       fontSize: sub_title,
+        //               //       color: Color(subtitle_grey),
+        //               //       fontWeight: FontWeight.w500),
+        //               // )
+        //             ],
+        //           ),
+        //         ],
+        //       ),
       )
     ]);
   }

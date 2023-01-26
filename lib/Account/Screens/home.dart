@@ -106,16 +106,13 @@ class _HomeState extends State<Home> {
             // ignore: prefer_const_literals_to_create_immutables
             children: [
               SizedBox(
-                height: 30,
+                height: 5,
               ),
               TextCard(),
               SizedBox(
-                height: 30,
+                height: 6,
               ),
-              SizedBox(
-                height: 60,
-              ),
-              //SliderCarousel(),
+              SliderCarousel(),
             ],
           ),
         ),
