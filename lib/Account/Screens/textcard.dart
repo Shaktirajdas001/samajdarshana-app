@@ -17,111 +17,62 @@ class TextCard extends StatefulWidget {
 class _TextCardState extends State<TextCard> {
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
-      Container(
-        height: 200,
-        width: 300,
-        color: Colors.yellow,
-        // decoration: BoxDecoration(
-        //   borderRadius: BorderRadius.only(
-        //     bottomLeft: Radius.circular(50),
-        //   ),
-        //   color: Colors.yellow,
-        // ),
-        child: Row(
-          children: [
-            // Positioned(
-            //   top: 35,
-            //   child: Material(
-            //       child: Container(
-            //     height: 180.0,
-            //     width: 300,
-            //     decoration: BoxDecoration(
-            //       color: Colors.yellow,
-            //       borderRadius: BorderRadius.circular(0.0),
-            //       // new BoxShadow(
-            //       //   color:Colors.green
-            //       // )
-            //     ),
-            //   )),
-            // ),
-            // Positioned(
-            //   child: Card(
-            //     elevation: 10.0,
-            //     shadowColor: Colors.grey,
-            //     shape: RoundedRectangleBorder(
-            //       borderRadius: BorderRadius.circular(10.0),
-            //     ),
-            //   ),
-            // ),
-
-            Container(
-              width: 125,
-              height: 125,
-              child: Align(
-                  alignment: Alignment.topRight,
-                  child: CircleAvatar(
-                    radius: 60.0,
-                    backgroundImage: AssetImage(
-                      "assets/images/yuvaadmin.png",
-                    ),
-                    // backgroundColor: Colors.yellow,
-                  )),
+    return Padding(
+      padding: EdgeInsets.only(top: 20, left: 20, right: 20),
+      child: Column(
+        children: [
+          GestureDetector(
+            onTap: () {},
+            child: Container(
+              height: 200,
+              child: Card(
+                elevation: 1,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                color: Colors.yellow,
+                child: Padding(
+                  padding: EdgeInsets.all(10),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Image(
+                            image: AssetImage("assets/images/yuvaadmin.png"),
+                            height: 150,
+                          )
+                        ],
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            height: 30,
+                          ),
+                          Text("युवा राहुल अग्रवाल",
+                              style: TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.w600)),
+                          Text(" अध्यक्ष",
+                              style: TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.w600)),
+                          Text("मारवाड़ी युवा मंच",
+                              style: TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.w600)),
+                          Text("7277756056",
+                              style: TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.w600)),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ),
             ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text("युवा राहुल अग्रवाल अध्यक्ष (2021-23) "),
-                Text("मारवाड़ी युवा मंच, मोतिहारी"),
-                Text("7277756056"),
-                // Text(
-                //   Provider.of<UserProfileProvider>(context,
-                //           listen: true)
-                //       .userName,
-                //   style: const TextStyle(
-                //       fontSize: sub_title,
-                //       color: Color(subtitle_grey),
-                //       fontWeight: FontWeight.w500),
-                // )
-              ],
-            ),
-          ],
-        ),
-        //  Row(
-        //         children: [
-        //           Container(
-        //             width: 125,
-        //             height: 125,
-        //             child: Align(
-        //                 alignment: Alignment.topRight,
-        //                 child: CircleAvatar(
-        //                   radius: 60.0,
-        //                   backgroundImage: AssetImage(
-        //                     "assets/images/yuvaadmin.png",
-        //                   ),
-        //                   backgroundColor: Colors.yellow,
-        //                 )),
-        //           ),
-        //           Column(
-        //             crossAxisAlignment: CrossAxisAlignment.start,
-        //             children: [
-        //               Text("युवा राहुल अग्रवाल अध्यक्ष (2021-23) "),
-        //               Text("मारवाड़ी युवा मंच, मोतिहारी"),
-        //               Text("7277756056"),
-        //               // Text(
-        //               //   Provider.of<UserProfileProvider>(context,
-        //               //           listen: true)
-        //               //       .userName,
-        //               //   style: const TextStyle(
-        //               //       fontSize: sub_title,
-        //               //       color: Color(subtitle_grey),
-        //               //       fontWeight: FontWeight.w500),
-        //               // )
-        //             ],
-        //           ),
-        //         ],
-        //       ),
-      )
-    ]);
+          ),
+        ],
+      ),
+    );
   }
 }

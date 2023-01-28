@@ -41,13 +41,17 @@ class _SliderCarouselState extends State<SliderCarousel> {
             //       fit: BoxFit.cover,
             //       width: 30),
             // ),
-            child: CircleAvatar(
-              backgroundColor: Color.fromARGB(255, 241, 148, 42),
-              radius: 150,
+            child: Container(
+              height: 80,
+              width: 80,
               child: CircleAvatar(
-                radius: 110,
-                backgroundImage: NetworkImage(
-                  images[index],
+                backgroundColor: Color.fromARGB(255, 241, 148, 42),
+                radius: 250,
+                child: CircleAvatar(
+                  radius: 110,
+                  backgroundImage: NetworkImage(
+                    images[index],
+                  ),
                 ),
               ),
             ),

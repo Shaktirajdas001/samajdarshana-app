@@ -173,22 +173,22 @@ class _HomeState extends State<Home> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                      padding: EdgeInsets.only(top: 15),
+                      padding: EdgeInsets.only(top: 15, left: 25),
                       child: Text(
-                        "Good morning",
+                        "Samaj Darpan",
                         style: TextStyle(
                             fontSize: 15,
-                            fontWeight: FontWeight.w600,
+                            fontWeight: FontWeight.w900,
                             color: Color.fromARGB(255, 16, 16, 15)),
                       )),
                   Padding(
-                    padding: const EdgeInsets.only(bottom: 10),
+                    padding: const EdgeInsets.only(bottom: 10, left: 25),
                     child: Text(
-                      "Guest",
+                      "समाज दर्पण",
                       style: TextStyle(
                           color: Color.fromARGB(255, 15, 15, 15),
                           fontSize: 16,
-                          fontWeight: FontWeight.w700),
+                          fontWeight: FontWeight.w600),
                     ),
                   ),
                 ],
@@ -253,20 +253,20 @@ class _HomeState extends State<Home> {
         ],
         body: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.all(10),
+            padding: const EdgeInsets.all(1),
             child: Column(
               // ignore: prefer_const_literals_to_create_immutables
               children: [
                 SizedBox(
-                  height: 5,
+                  height: 1,
                 ),
                 TextCard(),
-                SizedBox(
-                  height: 5,
-                ),
+                // SizedBox(
+                //   height: 1,
+                // ),
                 SliderCarousel(),
                 SizedBox(
-                  height: 5,
+                  height: 1,
                 ),
                 Blogs(),
               ],

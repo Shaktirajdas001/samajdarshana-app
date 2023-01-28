@@ -74,13 +74,17 @@ class _SidebarState extends State<SidebarScreen> {
           // Important: Remove any padding from the ListView.
           padding: EdgeInsets.zero,
           children: [
-            const DrawerHeader(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage('assets/images/sahitya.png')),
-                color: Colors.yellow,
+            Container(
+              height: 80,
+              width: 80,
+              child: const DrawerHeader(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage('assets/images/sahitya.png')),
+                  color: Colors.yellow,
+                ),
+                child: Text(''),
               ),
-              child: Text('Drawer Header'),
             ),
             ListTile(
               leading: Icon(
